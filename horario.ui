@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>horario</class>
+ <widget class="QDialog" name="horario">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>664</width>
+    <height>360</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(170, 170, 127);</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>40</y>
+     <width>81</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+font: 75 12pt &quot;Perpetua Titling MT&quot;;</string>
+   </property>
+   <property name="text">
+    <string>Horario</string>
+   </property>
+  </widget>
+  <widget class="QTableWidget" name="tableWidget">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>70</y>
+     <width>611</width>
+     <height>191</height>
+    </rect>
+   </property>
+   <row>
+    <property name="text">
+     <string>7:30-8:30</string>
+    </property>
+   </row>
+   <column>
+    <property name="text">
+     <string>Lunes</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Martes</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Miercoles</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Jueves</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>viernes</string>
+    </property>
+   </column>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>290</y>
+     <width>81</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Menu Principal</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_2">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>290</y>
+     <width>81</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Eliminar clases</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
