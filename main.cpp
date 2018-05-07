@@ -1,4 +1,5 @@
 #include "escuelaa.h"
+#include "alta.h"
 
 #include <QApplication>
 

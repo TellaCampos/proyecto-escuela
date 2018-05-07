@@ -11,14 +11,16 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 TARGET = escuela
 TEMPLATE = app
 
-FORMS += dialogalta.ui
+FORMS += dialogalta.ui \
+    alta.ui \
+    altaprofesores.ui
 # The following define makes your compiler emit warnings if you use
 # any feature of Qt which has been marked as deprecated (the exact warnings
 # depend on your compiler). Please consult the documentation of the
 # deprecated API in order to know how to port your code away from it.
 DEFINES += QT_DEPRECATED_WARNINGS
 QT += core gui widgets
-set(CMAKE_AUTOUIC ON)
+# set(CMAKE_AUTOUIC ON)
 
 
 # You can also make your code fail to compile if you use deprecated APIs.
@@ -41,6 +43,7 @@ SOURCES += \
     materiasmaestro.cpp \
     correo.cpp \
     dialogalta.cpp \
+    alta.cpp \
     altaprofesores.cpp
 
 HEADERS += \
@@ -56,6 +59,7 @@ HEADERS += \
     materiasmaestro.h \
     correo.h \
     dialogalta.h \
+    alta.h \
     altaprofesores.h
 
 FORMS += \
@@ -70,5 +74,4 @@ FORMS += \
     evento.ui \
     materiasmaestro.ui \
     correo.ui \
-    dialogalta.ui \
-    altaprofesores.ui
+    dialogalta.ui

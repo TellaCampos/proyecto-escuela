@@ -1,6 +1,5 @@
 #include "alta.h"
 #include "ui_alta.h"
-#include  <QMessageBox>
 
 alta::alta(QWidget *parent) :
     QDialog(parent),

@@ -7,7 +7,7 @@
 #include <QDialog>
 
 namespace Ui {
-class alumnos;
+    class alumnos;
 }
 
 class alumnos : public QDialog

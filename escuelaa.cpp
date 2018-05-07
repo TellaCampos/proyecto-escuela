@@ -32,7 +32,6 @@ std::vector<std::string> escuelaa::usuarios(){
      }else{
             QMessageBox::information(this, "Error", " Error con los usuarios ");
             std::vector<std::string> f;
-            f.push_back( "error error" );
             return f;
      }
 }
@@ -73,6 +72,8 @@ size_t split(std::string txt, std::vector<std::string> &strs, char ch)
 
 
 void escuelaa::verifica( int pos ){
+    std::string text = std::to_string(pos);
+   qDebug( text.c_str() );
     std::vector<std::string> users = usuarios();
     std::vector<std::string> v;
     for( std::string item: users )
@@ -90,6 +91,6 @@ void escuelaa::verifica( int pos ){
 
     }else{
         if( users.size()  > pos )
-         verifica( pos );
+         verifica( ++pos );
     }
 }

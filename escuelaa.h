@@ -1,7 +1,7 @@
 #ifndef ESCUELAA_H
 #define ESCUELAA_H
 #include "menu.h"
-#include "altaprofesores.cpp"
+#include "altaprofesores.h"
 
 #include <QMainWindow>
 #include <iostream>
@@ -9,6 +9,7 @@
 #include <string>
 #include<QMessageBox>
 #include <QString>
+#include <sstream>
 
 namespace Ui {
 class escuelaa;

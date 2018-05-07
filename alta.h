@@ -15,9 +15,6 @@ public:
     explicit alta(QWidget *parent = 0);
     ~alta();
 
-private slots:
-
-
 private:
     Ui::alta *ui;
 };
