@@ -5,6 +5,10 @@
 #include "evento.h"
 #include "menu.h"
 #include <QDialog>
+#include <iostream>
+#include <string>
+#include <vector>
+#include <fstream>
 
 namespace Ui {
 class agenda;
@@ -28,6 +32,8 @@ private slots:
     void on_pushButton_3_clicked();
 
     void on_pushButton_5_clicked();
+
+    void on_calendarWidget_clicked(const QDate &date);
 
 private:
     Ui::agenda *ui;

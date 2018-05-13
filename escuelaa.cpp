@@ -79,12 +79,19 @@ void escuelaa::verifica( int pos ){
     for( std::string item: users )
         qDebug( item.c_str() );
 
-    split( users[ pos ], v, ' ' );
+    split( users[ pos ], v, ',' );
 
 
 
     if( ui -> user -> text().toLocal8Bit().constData() == v [ 0 ] && ui -> pass -> text().toLocal8Bit().constData() == v[ 1 ] ){
         QMessageBox::information(this, "Login", " inicio de sesión exitoso ");
+
+        std::ofstream db("C:\\Users\\lgvel\\Desktop\\data.txt", std::ios_base::out);
+
+        db << users[pos];
+        db.close();
+
+
         hide();
         menu *main = new menu(this);
         main -> show();

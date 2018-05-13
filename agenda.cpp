@@ -50,3 +50,14 @@ void agenda::on_pushButton_5_clicked()
 {
     QMessageBox::information(this,"Warning","¿Desea eliminar el evento?");
 }
+
+void agenda::on_calendarWidget_clicked(const QDate &date)
+{
+   std::string select = date.toString("dd/MM/yyyy").toLocal8Bit().constData();
+
+
+   ui->listView->model()->insertRow( ui->listView->model()->rowCount() );
+
+   /*QModelIndex index =  ui->listView->model()->index( ui->listView->model()->rowCount()-1 );
+   ui->listView->model()->setData(index, QString::fromStdString( select ));*/
+}

@@ -3,7 +3,13 @@
 #include "alumnos.h"
 #include "agenda.h"
 #include "materiasmaestro.h"
-#include <QDialog>
+#include <QMainWindow>
+#include <iostream>
+#include <fstream>
+#include <string>
+#include<QMessageBox>
+#include <QString>
+#include <sstream>
 
 namespace Ui {
 class menu;
@@ -23,6 +29,9 @@ private slots:
     void on_pushButton_2_clicked();
 
     void on_pushButton_3_clicked();
+
+    std::vector<std::string> datos();
+    size_t split(std::string txt, std::vector<std::string> &strs, char ch);
 
 private:
     Ui::menu *ui;
