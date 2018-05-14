@@ -51,13 +51,81 @@ void agenda::on_pushButton_5_clicked()
     QMessageBox::information(this,"Warning","¿Desea eliminar el evento?");
 }
 
+
+std::vector<std::string> agenda::getAgenda(){
+    std::string line;
+     std::ifstream myfile ("C:\\Users\\lgvel\\Desktop\\agenda.txt");
+     std::vector<std::string> array;
+     if (myfile.is_open())
+     {
+       while ( getline( myfile, line ) )
+       {
+         array.push_back( line );
+         qDebug( line.c_str());
+       }
+       myfile.close();
+       return array;
+     }else{
+            QMessageBox::information(this, "Error", " Error con la agenda ");
+            std::vector<std::string> f;
+            return f;
+     }
+}
+
+size_t agenda::split(std::string txt, std::vector<std::string> &strs, char ch)
+{
+
+    size_t pos = txt.find( ch );
+    size_t initialPos = 0;
+    strs.clear();
+
+    while( pos != std::string::npos ) {
+        strs.push_back( txt.substr( initialPos, pos - initialPos ) );
+        initialPos = pos + 1;
+
+        pos = txt.find( ch, initialPos );
+    }
+
+    strs.push_back( txt.substr( initialPos, std::min( pos, txt.size() ) - initialPos + 1 ) );
+    return strs.size();
+}
+
+
+
+
+
+
 void agenda::on_calendarWidget_clicked(const QDate &date)
 {
-   std::string select = date.toString("dd/MM/yyyy").toLocal8Bit().constData();
+   QString select = date.toString("dd/MM/yyyy");
 
 
-   ui->listView->model()->insertRow( ui->listView->model()->rowCount() );
+   std::vector<std::string> fechas = getAgenda();
+   std::vector<std::string> v;
+   QStringList myList;
+   myList.append(select);
 
-   /*QModelIndex index =  ui->listView->model()->index( ui->listView->model()->rowCount()-1 );
-   ui->listView->model()->setData(index, QString::fromStdString( select ));*/
+   for( std::string item: fechas ){
+       qDebug( item.c_str() );
+        split( item, v, ',' );
+        if( v[0] == select.toLocal8Bit().constData() ){
+           std::string res;
+           res.append( v[1] );
+           res.append( " - " );
+           res.append( v[2] );
+            myList.append(  QString::fromStdString(res) );
+        }
+   }
+
+
+
+
+
+
+
+   QStringListModel* model = new QStringListModel();
+   model->setStringList(myList);
+   ui->listView->setModel(model);
+
+
 }

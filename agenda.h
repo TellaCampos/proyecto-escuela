@@ -8,7 +8,9 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <QStringListModel>
 #include <fstream>
+#include<QMessageBox>
 
 namespace Ui {
 class agenda;
@@ -34,6 +36,9 @@ private slots:
     void on_pushButton_5_clicked();
 
     void on_calendarWidget_clicked(const QDate &date);
+
+    std::vector<std::string> getAgenda();
+    size_t split(std::string txt, std::vector<std::string> &strs, char ch);
 
 private:
     Ui::agenda *ui;

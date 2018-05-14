@@ -18,6 +18,10 @@ public:
 
 private slots:
     void on_pushButton_clicked();
+    std::vector<std::string> getAlumnos();
+    size_t split(std::string txt, std::vector<std::string> &strs, char ch);
+
+    void on_listView_clicked(const QModelIndex &index);
 
 private:
     Ui::calificacion *ui;

@@ -16,7 +16,7 @@
   <property name="styleSheet">
    <string notr="true">background-color: rgb(143, 198, 194);</string>
   </property>
-  <widget class="QDateTimeEdit" name="dateTimeEdit">
+  <widget class="QDateTimeEdit" name="fecha">
    <property name="geometry">
     <rect>
      <x>40</x>
