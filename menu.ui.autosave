@@ -28,6 +28,8 @@ background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(58, 93, 145);
+font: 75 8pt &quot;System&quot;;
+color: rgb(255, 255, 255);
 </string>
    </property>
    <property name="text">
@@ -69,6 +71,9 @@ background-color: rgb(255, 255, 255);</string>
      <height>13</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">font: 75 8pt &quot;System&quot;;</string>
+   </property>
    <property name="text">
     <string>Notas</string>
    </property>
@@ -94,6 +99,10 @@ background-color: rgb(255, 255, 255);</string>
      <width>71</width>
      <height>16</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 75 8pt &quot;System&quot;;
+</string>
    </property>
    <property name="text">
     <string>Lista tutorados</string>

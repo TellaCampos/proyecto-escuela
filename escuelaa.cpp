@@ -76,12 +76,12 @@ void escuelaa::verifica( int pos ){
    qDebug( text.c_str() );
     std::vector<std::string> users = usuarios();
     std::vector<std::string> v;
-    for( std::string item: users )
-        qDebug( item.c_str() );
 
+    if( pos >= users.size()){
+         QMessageBox::information( this, "error", "No hay ningun usuario con esa informacion");
+        return;
+    }
     split( users[ pos ], v, ',' );
-
-
 
     if( ui -> user -> text().toLocal8Bit().constData() == v [ 0 ] && ui -> pass -> text().toLocal8Bit().constData() == v[ 1 ] ){
         QMessageBox::information(this, "Login", " inicio de sesión exitoso ");
@@ -99,5 +99,10 @@ void escuelaa::verifica( int pos ){
     }else{
         if( users.size()  > pos )
          verifica( ++pos );
+        else{
+            QMessageBox::information( this, "error", "No hay ningun usuario con esa informacion");
+            return;
+        }
+
     }
 }

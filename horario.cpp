@@ -7,6 +7,8 @@ horario::horario(QWidget *parent) :
     ui(new Ui::horario)
 {
     ui->setupUi(this);
+
+
 }
 
 horario::~horario()
@@ -25,4 +27,17 @@ void horario::on_pushButton_clicked()
     menu *main = new menu(this);
     main ->show();
 
+}
+
+void horario::on_pushButton_3_clicked()
+{
+    ui->tablaHorario->clear();
+    ui->tablaHorario->setRowCount(10);
+    ui->tablaHorario->setColumnCount(10);
+
+    for(int i=0; i<10; i++){
+      for(int j=0; j<10; j++){
+       ui->tablaHorario->setItem( i, j, new QTableWidgetItem() );
+      }
+    }
 }

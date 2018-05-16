@@ -57,7 +57,7 @@ void alumnos::on_pushButton_clicked()
 void alumnos::on_pushButton_2_clicked()
 {
     hide();
-    horario *hora = new horario(this);
+    MateriasMaestro *hora = new MateriasMaestro(this);
     hora ->show();
 
 }

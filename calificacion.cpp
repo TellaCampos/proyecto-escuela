@@ -11,7 +11,7 @@ calificacion::calificacion(QWidget *parent) :
     std::vector<std::string> v;
     QStringList myList;
 
-
+    matricula = "";
     for( std::string item: alum ){
         qDebug( item.c_str() );
          split( item, v, ',' );
@@ -34,6 +34,27 @@ calificacion::calificacion(QWidget *parent) :
     model->setStringList(myList);
     ui->listView->setModel(model);
 
+}
+
+
+std::vector<std::string> calificacion::getPromedio(){
+    std::string line;
+     std::ifstream myfile ("C:\\Users\\lgvel\\Desktop\\calificaciones.txt");
+     std::vector<std::string> array;
+     if (myfile.is_open())
+     {
+       while ( getline( myfile, line ) )
+       {
+         array.push_back( line );
+         qDebug( line.c_str());
+       }
+       myfile.close();
+       return array;
+     }else{
+            QMessageBox::information(this, "Error", " Error con la agenda ");
+            std::vector<std::string> f;
+            return f;
+     }
 }
 
 std::vector<std::string> calificacion::getAlumnos(){
@@ -92,12 +113,41 @@ void calificacion::on_listView_clicked(const QModelIndex &index)
 {
    std::vector<std::string> r;
    std::vector<std::string> l;
+   std::vector<std::string> v;
+   bool flag;
+   std::vector<std::string> prom = getPromedio();
     std::string req = index.data().toString().toLocal8Bit().constData();
-    split(req, r, '-');
+    split(req, r, '-'); //Se recupera del viewTable
 
-    //split(r[1], l, ' ');
+    split(r[1], l, ' '); //Se divide matrícula
+    qDebug( l[2].c_str() ); //matrícula
+    matricula = l[2];
+    flag = true;
+    for( auto item : prom ){
+        if( flag )
+            ui->materias->setValue( 0 );
+        split( item, v, ',');
+        if( matricula == v[0] ){
+            ui->materias->setValue( atoi( v[1].c_str() ));
+            flag = false;
+        }
+    }
+
 
     ui->label_6->setText( QString::fromStdString( r[0]) );
     ui->label_7->setText( QString::fromStdString( r[1] ));
 
+}
+
+void calificacion::on_pushButton_2_clicked()
+{
+    std::ofstream db("C:\\Users\\lgvel\\Desktop\\calificaciones.txt", std::ios_base::app | std::ios_base::out);
+
+
+    if( matricula != "" ){
+         db << std::endl << matricula << "," <<  ui->materias->value();
+         QMessageBox::information( this, "Aceptar", "Se cambió de calificación") ;
+    }else{
+        QMessageBox::information(this, "Error", "No seleccionó ningún alumno");
+    }
 }

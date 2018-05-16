@@ -21,9 +21,14 @@
     <rect>
      <x>40</x>
      <y>20</y>
-     <width>111</width>
+     <width>141</width>
      <height>16</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+font: 75 8pt &quot;System&quot;;
+color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>Llista de Estudiantes</string>

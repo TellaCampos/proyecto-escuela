@@ -4,6 +4,7 @@
 #include "horario.h"
 #include "menu.h"
 #include "altaalumnos.h"
+#include "materiasmaestro.h"
 
 #include <QDialog>
 
@@ -32,7 +33,7 @@ private slots:
 
     std::vector<std::string> getAlumnos();
     size_t split(std::string txt, std::vector<std::string> &strs, char ch);
-    std::vector<std::string> alumnos::getPromedio();
+    std::vector<std::string> getPromedio();
 
     void on_listView_clicked(const QModelIndex &index);
 

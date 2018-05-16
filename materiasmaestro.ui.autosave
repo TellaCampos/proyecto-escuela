@@ -91,7 +91,8 @@
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">font: 63 11pt &quot;Segoe UI Semibold&quot;;</string>
+    <string notr="true">font: 63 11pt &quot;Segoe UI Semibold&quot;;
+font: 75 8pt &quot;System&quot;;</string>
    </property>
    <property name="text">
     <string>Mi Horario</string>
@@ -106,6 +107,12 @@
      <height>13</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">font: 75 8pt &quot;System&quot;;
+color: rgb(255, 255, 255);
+background-color: rgb(58, 93, 145);
+</string>
+   </property>
    <property name="text">
     <string>Salon</string>
    </property>
@@ -113,7 +120,7 @@
   <widget class="QLineEdit" name="lineEdit">
    <property name="geometry">
     <rect>
-     <x>160</x>
+     <x>170</x>
      <y>270</y>
      <width>113</width>
      <height>20</height>
@@ -129,6 +136,11 @@
      <height>13</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(58, 93, 145);
+font: 75 8pt &quot;System&quot;;
+color: rgb(255, 255, 255);</string>
+   </property>
    <property name="text">
     <string>Seccion</string>
    </property>
@@ -136,7 +148,7 @@
   <widget class="QLineEdit" name="lineEdit_2">
    <property name="geometry">
     <rect>
-     <x>160</x>
+     <x>170</x>
      <y>300</y>
      <width>113</width>
      <height>20</height>
@@ -175,7 +187,7 @@
      <x>0</x>
      <y>220</y>
      <width>681</width>
-     <height>121</height>
+     <height>131</height>
     </rect>
    </property>
    <property name="styleSheet">

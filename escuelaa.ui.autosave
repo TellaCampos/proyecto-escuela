@@ -20,11 +20,14 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>250</x>
+      <x>230</x>
       <y>110</y>
-      <width>91</width>
-      <height>16</height>
+      <width>111</width>
+      <height>20</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 8pt &quot;System&quot;;</string>
     </property>
     <property name="text">
      <string>INICIAR SESION</string>
@@ -55,6 +58,9 @@
       <height>13</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 8pt &quot;System&quot;;</string>
+    </property>
     <property name="text">
      <string>USUARIO</string>
     </property>
@@ -62,11 +68,15 @@
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>150</x>
+      <x>130</x>
       <y>180</y>
-      <width>71</width>
-      <height>16</height>
+      <width>91</width>
+      <height>20</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 8pt &quot;System&quot;;
+</string>
     </property>
     <property name="text">
      <string>CONTRASEÑA</string>
@@ -95,25 +105,6 @@
      <string>INGRESAR</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_4">
-    <property name="geometry">
-     <rect>
-      <x>220</x>
-      <y>10</y>
-      <width>121</width>
-      <height>91</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap>logooo2.png</pixmap>
-    </property>
-    <property name="scaledContents">
-     <bool>true</bool>
-    </property>
-   </widget>
    <widget class="QLabel" name="label_5">
     <property name="geometry">
      <rect>
@@ -137,7 +128,6 @@
    <zorder>label_3</zorder>
    <zorder>pass</zorder>
    <zorder>pushButton</zorder>
-   <zorder>label_4</zorder>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">

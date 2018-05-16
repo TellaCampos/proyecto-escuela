@@ -20,11 +20,15 @@ private slots:
     void on_pushButton_clicked();
     std::vector<std::string> getAlumnos();
     size_t split(std::string txt, std::vector<std::string> &strs, char ch);
+    std::vector<std::string> getPromedio();
 
     void on_listView_clicked(const QModelIndex &index);
 
+    void on_pushButton_2_clicked();
+
 private:
     Ui::calificacion *ui;
+    std::string matricula;
 };
 
 #endif // CALIFICACION_H

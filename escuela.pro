@@ -14,7 +14,9 @@ TEMPLATE = app
 FORMS += dialogalta.ui \
     alta.ui \
     altaprofesores.ui \
-    altaalumnos.ui
+    altaalumnos.ui \
+    altamateria.ui \
+    agregarnota.ui
 # The following define makes your compiler emit warnings if you use
 # any feature of Qt which has been marked as deprecated (the exact warnings
 # depend on your compiler). Please consult the documentation of the
@@ -46,7 +48,9 @@ SOURCES += \
     dialogalta.cpp \
     alta.cpp \
     altaprofesores.cpp \
-    altaalumnos.cpp
+    altaalumnos.cpp \
+    altamateria.cpp \
+    agregarnota.cpp
 
 HEADERS += \
         escuelaa.h \
@@ -63,7 +67,9 @@ HEADERS += \
     dialogalta.h \
     alta.h \
     altaprofesores.h \
-    altaalumnos.h
+    altaalumnos.h \
+    altamateria.h \
+    agregarnota.h
 
 FORMS += \
         escuelaa.ui \

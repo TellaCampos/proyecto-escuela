@@ -10,7 +10,9 @@
 #include<QMessageBox>
 #include <QString>
 #include <sstream>
-
+#include"escuelaa.h"
+#include "agregarnota.h"
+#include <QPixmap>
 namespace Ui {
 class menu;
 }
@@ -29,9 +31,15 @@ private slots:
     void on_pushButton_2_clicked();
 
     void on_pushButton_3_clicked();
+    std::vector<std::string> getAlumnos();
 
     std::vector<std::string> datos();
+        std::vector<std::string> notas();
     size_t split(std::string txt, std::vector<std::string> &strs, char ch);
+
+    void on_pushButton_4_clicked();
+
+    void on_pushButton_5_clicked();
 
 private:
     Ui::menu *ui;
